@@ -5,7 +5,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColorJhon">
 
 
 
@@ -15,134 +16,50 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#FF1324"
-        android:padding="16dp"
+        android:padding="10dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:background="@color/gradient_background_fondo_jhon">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Menú Superior ---ANDO NAVIDEÑO---"
+            android:text="ALEA"
             android:textColor="@android:color/white"
-            android:textSize="18sp" />
+            android:textSize="28sp"
+            android:layout_gravity="center"
+            android:textAlignment="center"/>
+
+        <ImageView
+            android:id="@+id/racha"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_rachafuego"
+            app:tint="@color/white"
+            android:contentDescription="Icono de perfil"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
     </LinearLayout>
 
     <!-- Contenido Scrolleable -->
     <ScrollView
         android:id="@+id/scrollable_content"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_weight="1"
         app:layout_constraintTop_toBottomOf="@id/top_menu"
         app:layout_constraintBottom_toTopOf="@id/bottom_menu"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@color/gradient_background">
+        android:fillViewport="true">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <!--
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="center">
-
-                <com.example.midiariop.ui.home.CircularProgressBar
-                    android:id="@+id/circularProgressBar"
-                    android:layout_width="250dp"
-                    android:layout_height="250dp" />
-
-                <Button
-                    android:id="@+id/btnUpdateProgress"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Actualizar Progreso"
-                    android:layout_marginTop="16dp" />
-
-                <TextView
-                    android:id="@+id/text_consumed"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:text="0\nCONSUMIDAS"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="14sp" />
-
-                <LinearLayout
-                    android:id="@+id/water_counter"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="@drawable/water_counter_background"
-                    android:orientation="vertical"
-                    android:padding="8dp">
-
-                    <TextView
-                        android:id="@+id/water_title"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="Contador de agua (0  1)"
-                        android:textColor="@color/black"
-                        android:textSize="14sp" />
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="8dp"
-                        android:orientation="horizontal">
-
-                        Repetir elementos de vaso
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:contentDescription="Vaso de agua"
-                            android:src="@drawable/ic_glass" />
-
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:contentDescription="Vaso de agua"
-                            android:src="@drawable/ic_glass" />
-
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:contentDescription="Vaso de agua"
-                            android:src="@drawable/ic_glass" />
-
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:contentDescription="Vaso de agua"
-                            android:src="@drawable/ic_glass" />
-
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:contentDescription="Vaso de agua"
-                            android:src="@drawable/ic_glass" />
-
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:contentDescription="Vaso de agua"
-                            android:src="@drawable/ic_glass" />
-                    </LinearLayout>
-
-                </LinearLayout>
-            </LinearLayout>
-            -->
-
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_background_jhon">
 
 
             <!-- Botón superior izquierdo -->
@@ -192,77 +109,6 @@
 
 
 
-            <!-- Botón de estadísticas -->
-            <!--
-            <TextView
-                android:id="@+id/btn_statistics"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="VER ESTADÍSTICAS"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                android:drawableBottom="@drawable/ic_arrow_down"
-                android:drawablePadding="4dp"
-                android:layout_marginTop="16dp"
-                app:layout_constraintTop_toBottomOf="@id/text_consumed"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:visibility="gone" />
-            -->
-
-            <!-- Sección de nutrientes -->
-            <!--
-            <LinearLayout
-                android:id="@+id/nutrient_section"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/nutrient_background"
-                android:padding="8dp"
-                app:layout_constraintTop_toBottomOf="@id/btn_statistics"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:visibility="gone">
-
-                <TextView
-                    android:id="@+id/carbohydrates"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Carbohidratos\n0/281g"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/proteins"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Proteínas\n0/112g"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/fats"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Grasas\n0/75g"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
-            </LinearLayout>
-            -->
-
-            <!-- Contador de agua -->
-
-
-
             <FrameLayout
                 android:id="@+id/contenedor_kcal_circular"
                 android:layout_width="wrap_content"
@@ -271,12 +117,11 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintVertical_bias="0.1">
+                app:layout_constraintVertical_bias="0">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#FA1234">
+                    android:layout_height="match_parent">
 
                     <com.example.midiariop.ui.home.CircularProgressBar
                         android:id="@+id/circularProgressBar"
@@ -403,22 +248,42 @@
             </FrameLayout>
 
             <!-- VER ESTADÍSTICAS -->
-            <TextView
-                android:id="@+id/btn_statistics"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/contenedor_estadisticas"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:text="VER ESTADÍSTICAS"
-                android:textColor="@color/white"
-                android:textSize="16sp"
-                android:drawableBottom="@drawable/ic_arrow_down"
-                android:drawablePadding="4dp"
-                android:layout_marginTop="16dp"
                 app:layout_constraintTop_toBottomOf="@id/contenedor_kcal_circular"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
+                android:gravity="center">
 
-            <!-- Sección de nutrientes -->
+                <TextView
+                    android:id="@+id/btn_statistics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="VER ESTADÍSTICAS"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:drawablePadding="4dp"
+                    android:layout_marginEnd="15dp"/>
+
+                <ImageView
+                    android:id="@+id/desplegar_abajo_stats"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_abajo_desplegar"
+                    app:tint="@color/white" />
+
+            </LinearLayout>
+
+
+
+            <!-- SECCIÓN NUTRIENTES -->
             <LinearLayout
                 android:id="@+id/nutrient_section"
                 android:layout_width="0dp"
@@ -426,107 +291,881 @@
                 android:orientation="horizontal"
                 android:background="@drawable/nutrient_background"
                 android:padding="8dp"
-                app:layout_constraintTop_toBottomOf="@id/btn_statistics"
+                app:layout_constraintTop_toBottomOf="@id/contenedor_estadisticas"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="20dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp">
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="20dp">
 
-                <TextView
-                    android:id="@+id/carbohydrates"
+                <!-- Contenedor para Carbohidratos -->
+                <LinearLayout
+                    android:id="@+id/carbohydratesContainer"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="sans-serif-medium"
-                    android:gravity="center"
-                    android:text="Carbohidratos\n0/281g"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:orientation="vertical"
+                    android:gravity="center">
 
-                <TextView
-                    android:id="@+id/proteins"
+                    <!-- Título estático: Carbohidratos -->
+                    <TextView
+                        android:id="@+id/carbohydratesTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="Carbohidratos"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <!-- Barra de progreso horizontal -->
+                    <ProgressBar
+                        android:id="@+id/carbohydratesProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="65dp"
+                        android:layout_height="8dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:progress="0"
+                        android:max="281"
+                        android:progressTint="@color/progressCarbs"
+                        android:backgroundTint="@color/fondoMiniBarra" />
+
+                    <!-- Contenedor horizontal para los valores -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <!-- Valor dinámico: 0 -->
+                        <TextView
+                            android:id="@+id/carbohydratesConsumed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <!-- Texto estático: "/" -->
+                        <TextView
+                            android:id="@+id/carbohydratesSeparator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="/"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <!-- Valor dinámico: 281g -->
+                        <TextView
+                            android:id="@+id/carbohydratesTarget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="281g"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Contenedor para Proteínas -->
+                <LinearLayout
+                    android:id="@+id/proteinsContainer"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="sans-serif-medium"
-                    android:gravity="center"
-                    android:text="Proteínas\n0/112g"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
+                    android:orientation="vertical"
+                    android:gravity="center">
 
-                <TextView
-                    android:id="@+id/fats"
+                    <!-- Título estático: Proteínas -->
+                    <TextView
+                        android:id="@+id/proteinsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="Proteínas"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <!-- Barra de progreso horizontal -->
+                    <ProgressBar
+                        android:id="@+id/proteinsProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="65dp"
+                        android:layout_height="8dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:progress="0"
+                        android:max="281"
+                        android:progressTint="@color/progressProteins"
+                        android:backgroundTint="@color/fondoMiniBarra" />
+
+                    <!-- Contenedor horizontal para los valores -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <!-- Valor dinámico: 0 -->
+                        <TextView
+                            android:id="@+id/proteinsConsumed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <!-- Texto estático: "/" -->
+                        <TextView
+                            android:id="@+id/proteinsSeparator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="/"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <!-- Valor dinámico: 112g -->
+                        <TextView
+                            android:id="@+id/proteinsTarget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="112g"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Contenedor para Grasas -->
+                <LinearLayout
+                    android:id="@+id/fatsContainer"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="sans-serif-medium"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <!-- Título estático: Grasas -->
+                    <TextView
+                        android:id="@+id/fatsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:gravity="center"
+                        android:text="Grasas"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <!-- Barra de progreso horizontal -->
+                    <ProgressBar
+                        android:id="@+id/fatsProgressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="65dp"
+                        android:layout_height="8dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginBottom="1dp"
+                        android:progress="0"
+                        android:max="281"
+                        android:progressTint="@color/progressFats"
+                        android:backgroundTint="@color/fondoMiniBarra" />
+
+                    <!-- Contenedor horizontal para los valores -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <!-- Valor dinámico: 0 -->
+                        <TextView
+                            android:id="@+id/fatsConsumed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <!-- Texto estático: "/" -->
+                        <TextView
+                            android:id="@+id/fatsSeparator"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="/"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <!-- Valor dinámico: 75g -->
+                        <TextView
+                            android:id="@+id/fatsTarget"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:text="75g"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <!-- SECCIÓN FECHA -->
+            <LinearLayout
+                android:id="@+id/date_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/nutrient_section"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="15dp">
+
+                <!-- Flecha izquierda -->
+                <ImageView
+                    android:id="@+id/arrow_left"
+                    android:layout_width="13dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_atras"
+                    app:tint="@color/black" />
+                <!--android:contentDescription="@string/previous_date"-->
+
+                <!-- Ícono de calendario y texto de la fecha -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <!-- Ícono de calendario -->
+                    <ImageView
+                        android:id="@+id/calendar_icon"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:src="@drawable/ic_calendario"
+                        app:tint="@color/black"/>
+                    <!--android:contentDescription="@string/calendar_icon"-->
+
+                    <!-- Texto de la fecha -->
+                    <TextView
+                        android:id="@+id/date_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="HOY, 22 DIC"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <!-- Flecha derecha -->
+                <ImageView
+                    android:id="@+id/arrow_right"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_adelante"
+                    app:tint="@color/black"/>
+                <!--android:contentDescription="@string/next_date"-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/water_tracker_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/date_section"
+                android:background="@drawable/nutrient_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="15dp"
+                android:padding="12dp">
+
+                <!-- Texto del contador de agua -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Contador de agua"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/water_counter_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:fontFamily="monospace"
+                        android:text="(0 l)"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <!-- Contenedor de los vasos -->
+                <GridLayout
+                    android:id="@+id/water_glass_grid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="7"
+                    android:rowCount="2"
                     android:gravity="center"
-                    android:text="Grasas\n0/75g"
+                    android:layout_marginTop="15dp">
+
+                    <!-- Vasos de agua -->
+                    <FrameLayout
+                        android:id="@+id/glass_1"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp">
+
+                        <ImageView
+                            android:id="@+id/glass_image_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_vaso_agua"
+                            app:tint="@color/opaco" />
+
+                        <ImageView
+                            android:id="@+id/add_icon_1"
+                            android:layout_width="20dp"
+                            android:layout_height="28dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_add"
+                            app:tint="@color/black"/>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/glass_2"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp">
+
+                        <ImageView
+                            android:id="@+id/glass_image_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_vaso_agua"
+                            app:tint="@color/opaco" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/glass_3"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp">
+
+                        <ImageView
+                            android:id="@+id/glass_image_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_vaso_agua"
+                            app:tint="@color/opaco" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/glass_4"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp">
+
+                        <ImageView
+                            android:id="@+id/glass_image_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_vaso_agua"
+                            app:tint="@color/opaco" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/glass_5"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp">
+
+                        <ImageView
+                            android:id="@+id/glass_image_5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_vaso_agua"
+                            app:tint="@color/opaco" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/glass_6"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp">
+
+                        <ImageView
+                            android:id="@+id/glass_image_6"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_vaso_agua"
+                            app:tint="@color/opaco" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/glass_7"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp">
+
+                        <ImageView
+                            android:id="@+id/glass_image_7"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_vaso_agua"
+                            app:tint="@color/opaco" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/glass_8"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_marginTop="20dp">
+
+                        <ImageView
+                            android:id="@+id/glass_image_8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_vaso_agua"
+                            app:tint="@color/opaco" />
+                    </FrameLayout>
+
+                    <!-- Repetir vasos con el mismo FrameLayout para los demás vasos, cambiar id's: glass_2, glass_3, etc. -->
+                </GridLayout>
+            </LinearLayout>
+
+            <!-- SECCIÓN DESAYUNO -->
+            <LinearLayout
+                android:id="@+id/contenedor_Desayuno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:background="@drawable/nutrient_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/water_tracker_container"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="15dp">
+
+                <!-- Contenedor principal -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Imagen de referencia -->
+                    <ImageView
+                        android:id="@+id/desayunoImageJhon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/leche"
+                        android:layout_marginEnd="16dp"
+                        android:scaleType="centerCrop" />
+
+                    <!-- Textos -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <!-- Nombre de la comida -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Desayuno"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="16sp" />
+
+                        <!-- Detalles de los alimentos -->
+                        <TextView
+                            android:id="@+id/desayunoDetalles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Coca Cola Zero, Pollo a la brasa, Pan"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/circularButtonContainer_desayuno"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center">
+                        <!-- Botón circular plomo -->
+                        <View
+                            android:id="@+id/addMealButton_desayuno"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/circular_buttonadd_background_1" />
+
+                        <!-- Icono del signo de suma -->
+                        <ImageView
+                            android:id="@+id/plusIcon_desayuno"
+                            android:layout_width="27dp"
+                            android:layout_height="27dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_add"
+                            app:tint="@color/graySumaFoodJhon" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <!-- Línea separadora -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/backgroundColorJhon"
+                    android:layout_marginVertical="8dp" />
+
+                <!-- Calorías -->
+                <TextView
+                    android:id="@+id/desayunoCalorias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="582 kcal"
                     android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:textSize="14sp" />
             </LinearLayout>
 
-            <!-- Contenedor para los TextView -->
-            <FrameLayout
-                android:id="@+id/contenedorTextos"
-                android:layout_width="wrap_content"
+            <!-- SECCIÓN ALMUERZO -->
+            <LinearLayout
+                android:id="@+id/contenedor_Almuerzo"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/nutrient_section"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:background="@drawable/nutrient_background"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                android:background="#8E8B8B"
-                android:padding="5dp">
+                app:layout_constraintTop_toBottomOf="@id/contenedor_Desayuno"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="15dp">
 
-
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <!-- Contenedor principal -->
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#227CDB">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
 
-                    <!-- Primer TextView -->
-                    <TextView
-                        android:id="@+id/textView1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        android:background="#FF1234"
-                        android:textColor="#000000"
-                        android:text="Texto 1" />
+                    <!-- Imagen de referencia -->
+                    <ImageView
+                        android:id="@+id/almuerzoImageJhon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/leche"
+                        android:layout_marginEnd="16dp"
+                        android:scaleType="centerCrop" />
 
-                    <!-- Segundo TextView -->
-                    <TextView
-                        android:id="@+id/textView2"
-                        android:layout_width="wrap_content"
+                    <!-- Textos -->
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/textView1"
-                        android:background="#B7B7BD"
-                        android:textColor="#000000"
-                        android:text="Texto 2Texto 2Texto 2Texto 2Texto 2"
-                        android:layout_marginStart="16dp"/>
+                        android:layout_weight="1"
+                        android:orientation="vertical">
 
-                    <!-- Segundo TextView -->
-                    <TextView
-                        android:id="@+id/textView3"
-                        android:layout_width="wrap_content"
+                        <!-- Nombre de la comida -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Almuerzo"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="16sp" />
+
+                        <!-- Detalles de los alimentos -->
+                        <TextView
+                            android:id="@+id/almuerzoDetalles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Coca Cola Zero, Pollo a la brasa, Pan"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <!-- Botón de agregar -->
+                    <FrameLayout
+                        android:id="@+id/circularButtonContainer_almuerzo"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center">
+                        <!-- Botón circular plomo -->
+                        <View
+                            android:id="@+id/addMealButton_almuerzo"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/circular_buttonadd_background_1" />
+
+                        <!-- Icono del signo de suma -->
+                        <ImageView
+                            android:id="@+id/plusIcon_almuerzo"
+                            android:layout_width="27dp"
+                            android:layout_height="27dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_add"
+                            app:tint="@color/graySumaFoodJhon" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <!-- Línea separadora -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/backgroundColorJhon"
+                    android:layout_marginVertical="8dp" />
+
+                <!-- Calorías -->
+                <TextView
+                    android:id="@+id/almuerzoCalorias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="582 kcal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- SECCIÓN CENA -->
+            <LinearLayout
+                android:id="@+id/contenedor_Cena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:background="@drawable/nutrient_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contenedor_Almuerzo"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="15dp">
+
+                <!-- Contenedor principal -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Imagen de referencia -->
+                    <ImageView
+                        android:id="@+id/cenaImageJhon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/leche"
+                        android:layout_marginEnd="16dp"
+                        android:scaleType="centerCrop" />
+
+                    <!-- Textos -->
+                    <LinearLayout
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/textView2"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        android:background="#A4928D"
-                        android:textColor="#000000"
-                        android:text="Texto 3"
-                        android:layout_marginStart="16dp"/>
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </FrameLayout>
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <!-- Nombre de la comida -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cena"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="16sp" />
+
+                        <!-- Detalles de los alimentos -->
+                        <TextView
+                            android:id="@+id/cenaDetalles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Coca Cola Zero, Pollo a la brasa, Pan"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/circularButtonContainer_cena"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center">
+                        <!-- Botón circular plomo -->
+                        <View
+                            android:id="@+id/addMealButton_cena"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/circular_buttonadd_background_1" />
+
+                        <!-- Icono del signo de suma -->
+                        <ImageView
+                            android:id="@+id/plusIcon_cena"
+                            android:layout_width="27dp"
+                            android:layout_height="27dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_add"
+                            app:tint="@color/graySumaFoodJhon" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <!-- Línea separadora -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/backgroundColorJhon"
+                    android:layout_marginVertical="8dp" />
+
+                <!-- Calorías -->
+                <TextView
+                    android:id="@+id/cenaCalorias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="582 kcal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <!-- SECCIÓN SNACKS -->
+            <LinearLayout
+                android:id="@+id/contenedor_Snacks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:background="@drawable/nutrient_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contenedor_Cena"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="50dp">
+
+                <!-- Contenedor principal -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- Imagen de referencia -->
+                    <ImageView
+                        android:id="@+id/snackImageJhon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/leche"
+                        android:layout_marginEnd="16dp"
+                        android:scaleType="centerCrop" />
+
+                    <!-- Textos -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <!-- Nombre de la comida -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Snacks"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:textSize="16sp" />
+
+                        <!-- Detalles de los alimentos -->
+                        <TextView
+                            android:id="@+id/snackDetalles"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Coca Cola Zero, Pollo a la brasa, Pan"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/circularButtonContainer_snacks"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center">
+                        <!-- Botón circular plomo -->
+                        <View
+                            android:id="@+id/addMealButton_snacks"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/circular_buttonadd_background_1" />
+
+                        <!-- Icono del signo de suma -->
+                        <ImageView
+                            android:id="@+id/plusIcon_snacks"
+                            android:layout_width="27dp"
+                            android:layout_height="27dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_add"
+                            app:tint="@color/graySumaFoodJhon" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <!-- Línea separadora -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/backgroundColorJhon"
+                    android:layout_marginVertical="8dp" />
+
+                <!-- Calorías -->
+                <TextView
+                    android:id="@+id/snackCalorias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="582 kcal"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/contenedor_Snacks"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="35dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/backgroundColorJhon"
+                    android:text="ALEA"/>
+            </LinearLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
 
     <Button
         android:id="@+id/btnUpdateProgress"
@@ -536,8 +1175,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Actualizar Progreso"
-        android:layout_marginTop="8dp" />
+        app:layout_constraintVertical_bias="0.9"
+        android:text="Actualizar Progreso"/>
+
+    <FrameLayout
+        android:id="@+id/circularButtonContainer"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintHorizontal_bias="1">
+
+        <!-- Botón circular verde -->
+        <View
+            android:id="@+id/circularButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/circular_buttonadd_background" />
+
+        <!-- Icono del signo de suma -->
+        <ImageView
+            android:id="@+id/plusIcon"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_add"
+            app:tint="@color/green_dark" />
+    </FrameLayout>
+
 
     <!-- Barra inferior (Bottom Menu) -->
     <LinearLayout
@@ -560,6 +1230,7 @@
     </LinearLayout>
 
     <!-- Imagen de plantilla -->
+    <!--
     <ImageView
         android:id="@+id/templateImage"
         android:layout_width="match_parent"
@@ -571,5 +1242,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+    -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
