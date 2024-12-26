@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fondo principal con degradado -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:endColor="#00FFFFFF"
+                android:centerColor="#00FFFFFF"
+                android:startColor="@color/gradient_background_fondo_jhon"
+                android:type="linear"
+                android:gradientRadius="0.1"
+                android:centerY="0.3"/>
+        </shape>
+    </item>
+</layer-list>
+

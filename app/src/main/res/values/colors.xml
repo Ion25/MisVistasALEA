@@ -7,6 +7,25 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
     <color name="gradient_background">#96F047</color>
+    <color name="gradient_background_fondo_jhon">#28B944</color>
+    <color name="green">#5AF059</color>
+    <color name="green_dark">#094A36</color>
+    <color name="opaco">#B6CAED</color>
+    <color name="fondoMiniBarra">#F1ECE8</color>
+    <color name="progressCarbs">#F4B556</color>
+    <color name="progressProteins">#F16C99</color>
+    <color name="progressFats">#AC96D6</color>
+    <color name="grayColorJhon">#E6E1DE</color>
+    <color name="gray1ColorJhon">#A89F9A</color>
+    <color name="backgroundColorJhon">#F2EDE9</color>
+    <color name="graySumaFoodJhon">#A69D98</color>
+    <color name="graybackgroundSumaFoodJhon">#E6E1DE</color>
+
+
+
+
 
 </resources>
