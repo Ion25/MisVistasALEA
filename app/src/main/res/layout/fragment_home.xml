@@ -326,7 +326,7 @@
                         android:layout_height="8dp"
                         android:layout_marginTop="1dp"
                         android:layout_marginBottom="1dp"
-                        android:progress="0"
+                        android:progress="75"
                         android:max="281"
                         android:progressTint="@color/progressCarbs"
                         android:backgroundTint="@color/fondoMiniBarra" />
@@ -541,12 +541,14 @@
                 android:layout_marginTop="15dp">
 
                 <!-- Flecha izquierda -->
+                <!--
                 <ImageView
                     android:id="@+id/arrow_left"
                     android:layout_width="13dp"
                     android:layout_height="16dp"
                     android:src="@drawable/ic_atras"
                     app:tint="@color/black" />
+                -->
                 <!--android:contentDescription="@string/previous_date"-->
 
                 <!-- Ícono de calendario y texto de la fecha -->
@@ -566,26 +568,27 @@
                         app:tint="@color/black"/>
                     <!--android:contentDescription="@string/calendar_icon"-->
 
-                    <!-- Texto de la fecha -->
-                    <TextView
-                        android:id="@+id/date_text"
-                        android:layout_width="wrap_content"
+                    <!-- RecyclerView horizontal para las fechas -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/date_recycler_view"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="HOY, 22 DIC"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
+                        android:orientation="horizontal"
+                        android:overScrollMode="never"
+                        android:scrollbars="none"
+                        tools:listitem="@layout/item_date" />
                 </LinearLayout>
 
                 <!-- Flecha derecha -->
+                <!--
                 <ImageView
                     android:id="@+id/arrow_right"
                     android:layout_width="16dp"
                     android:layout_height="16dp"
                     android:src="@drawable/ic_adelante"
                     app:tint="@color/black"/>
-                <!--android:contentDescription="@string/next_date"-->
+                    android:contentDescription="@string/next_date"
+                -->
 
             </LinearLayout>
 

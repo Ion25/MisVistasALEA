@@ -24,6 +24,10 @@
     <color name="graySumaFoodJhon">#A69D98</color>
     <color name="graybackgroundSumaFoodJhon">#E6E1DE</color>
 
+    <color name="selectedColorJhon">#86E498</color>
+    <color name="unselectedColorJhon">#2E2B2B</color>
+
+
 
 
 

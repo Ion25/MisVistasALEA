@@ -64,4 +64,14 @@ class CircularProgressBar @JvmOverloads constructor(
         }
         animator.start()
     }
+
+    fun getProgress(): Float {
+        return progress
+    }
+
+    fun setProgress(newProgress: Float) {
+        progress = newProgress
+        invalidate() // Redibuja la vista inmediatamente
+    }
 }
+
