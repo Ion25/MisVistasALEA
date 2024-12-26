@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_usuario"
+        android:icon="@drawable/ic_sexo"
+        android:title="Perfil" />
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home"
+        android:title="Calorias" />
+    <item
+        android:id="@+id/nav_profile"
+        android:icon="@drawable/ic_profile_1"
+        android:title="Escánear Alimento" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="Crear Plato" />
+</menu>
